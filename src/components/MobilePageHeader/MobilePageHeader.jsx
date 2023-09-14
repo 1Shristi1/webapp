@@ -22,7 +22,7 @@ export const MobilePageHeader = ({
   onclose
 }) => {
   return (
-    <div className={`inline-flex flex-col items-start relative ${className}`}>
+    <div className={`inline-flex flex-col items-start pt-[5px] relative ${className}`}>
       {/* <TimeBar
         className="!bg-[color:var(--backgroundcontextualsurface)] !relative"
         symbols="/img/symbols-1.svg"

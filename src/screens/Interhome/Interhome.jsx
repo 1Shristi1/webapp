@@ -6,7 +6,7 @@ import { ArrowDownOutline1 } from "../../icons/ArrowDownOutline1";
 import { ArrowLeftOutline1 } from "../../icons/ArrowLeftOutline1";
 import { CaretRightOutline } from "../../icons/CaretRightOutline";
 import { GoldJewelsOutline } from "../../icons/GoldJewelsOutline";
-import {CardTracker } from '../CardTracker';
+import { CardTracker } from '../CardTracker';
 
 export const Interhome = () => {
   const [isCardTrackingVisible, setIsCardTrackingVisible] = useState(false);
@@ -19,6 +19,17 @@ export const Interhome = () => {
     setIsCardTrackingVisible(false);
   };
 
+  const cardTrackerStyles = {
+    position: 'fixed',
+    top: '0',
+    right: isCardTrackingVisible ? '0' : '-100%',
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#131313',
+    opacity: '1',
+    transition: 'right 0.3s ease-in-out',
+    zIndex: '50',
+  };
 
   return (
     <div className="bg-[#131313] flex flex-row justify-center w-full">
@@ -96,9 +107,11 @@ export const Interhome = () => {
                             />
                           </button>
 
-                          {isCardTrackingVisible && (
-                            <CardTracker isVisible= {isCardTrackingVisible} onClose={handleCloseCardTracking} />
-                          )}
+                          <div style={cardTrackerStyles}>
+                            {isCardTrackingVisible && (
+                              <CardTracker onClose={handleCloseCardTracking} />
+                            )}
+                          </div>
                         </div>
 
                       </div>

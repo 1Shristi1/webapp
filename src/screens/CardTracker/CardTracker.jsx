@@ -4,12 +4,12 @@ import { CreditCardSimpleOutline } from "../../icons/CreditCardSimpleOutline";
 import { EnvelopeOpenOutline } from "../../icons/EnvelopeOpenOutline";
 import { HomeOutline } from "../../icons/HomeOutline";
 
-export const CardTracker = ({isVisible, onClose }) => {
-   
-  const slideInClass = isVisible ? 'translate-x-0' : 'translate-x-full';
+export const CardTracker = ({ onClose }) => {
+  
 
   return (
-    <div className={`fixed inset-0 flex justify-center items-center bg-[#131313] bg-opacity-1 z-50 transition-transform transition-all duration-700 transform ${slideInClass}`}>
+    <div
+    className="fixed inset-0 flex justify-center items-center bg-[#131313] bg-opacity-1 z-50">
       <div className="bg-[color:var(--backgroundneutralsecondary)]">
         <div className="flex flex-col w-[328px] h-[396px] items-start gap-[48px] pt-[8px] pb-0 px-0 absolute top-[104px] left-[16px]">
           <div className="flex flex-col items-start gap-[16px] relative self-stretch w-full flex-[0_0_auto]">
@@ -56,7 +56,7 @@ export const CardTracker = ({isVisible, onClose }) => {
               <div className="flex items-start gap-[16px] relative flex-1 grow">
                 <EnvelopeOpenOutline className="!relative !w-[24px] !h-[24px]" />
                 <div className="flex flex-col items-start gap-[8px] relative flex-1 grow">
-                  <p className="self-stretch mt-[-1.00px] font-[number:var(--body-medium-high-emphasis-font-weight)] text-[color:var(--borderneutralprimary)] text-[length:var(--body-medium-high-emphasis-font-size)] tracking-[var(--body-medium-high-emphasis-letter-spacing)] leading-[var(--body-medium-high-emphasis-line-height)] relative [font-family:var(--body-medium-high-emphasis-font-family)] [font-style:var(--body-medium-high-emphasis-font-style)]">
+                <p className="self-stretch mt-[-1.00px] font-[number:var(--body-medium-high-emphasis-font-weight)] text-[color:var(--typeneutralmedium-emphasis)] text-[length:var(--body-medium-high-emphasis-font-size)] tracking-[var(--body-medium-high-emphasis-letter-spacing)] leading-[var(--body-medium-high-emphasis-line-height)] relative [font-family:var(--body-medium-high-emphasis-font-family)] [font-style:var(--body-medium-high-emphasis-font-style)]">
                     Credit card has been dispatched
                   </p>
                   <p className="w-[284px] font-[number:var(--body-small-low-emphasis-font-weight)] text-[color:var(--typeneutrallow-emphasis)] text-[length:var(--body-small-low-emphasis-font-size)] tracking-[var(--body-small-low-emphasis-letter-spacing)] leading-[var(--body-small-low-emphasis-line-height)] relative [font-family:var(--body-small-low-emphasis-font-family)] [font-style:var(--body-small-low-emphasis-font-style)]">
@@ -70,7 +70,7 @@ export const CardTracker = ({isVisible, onClose }) => {
                 <div className="h-[65px] top-[-45px] absolute w-[2px] left-[11px] bg-[color:var(--borderneutralprimary)]" />
                 <HomeOutline className="!relative !w-[24px] !h-[24px]" />
                 <div className="flex flex-col items-start gap-[8px] relative flex-1 grow">
-                  <p className="self-stretch mt-[-1.00px] font-[number:var(--body-medium-high-emphasis-font-weight)] text-[color:var(--borderneutralprimary)] text-[length:var(--body-medium-high-emphasis-font-size)] tracking-[var(--body-medium-high-emphasis-letter-spacing)] leading-[var(--body-medium-high-emphasis-line-height)] relative [font-family:var(--body-medium-high-emphasis-font-family)] [font-style:var(--body-medium-high-emphasis-font-style)]">
+                <p className="self-stretch mt-[-1.00px] font-[number:var(--body-medium-high-emphasis-font-weight)] text-[color:var(--typeneutralmedium-emphasis)] text-[length:var(--body-medium-high-emphasis-font-size)] tracking-[var(--body-medium-high-emphasis-letter-spacing)] leading-[var(--body-medium-high-emphasis-line-height)] relative [font-family:var(--body-medium-high-emphasis-font-family)] [font-style:var(--body-medium-high-emphasis-font-style)]">
                     Credit card has been delivered
                   </p>
                 </div>
