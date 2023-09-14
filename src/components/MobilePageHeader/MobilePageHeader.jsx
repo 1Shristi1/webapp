@@ -22,14 +22,14 @@ export const MobilePageHeader = ({
   onclose
 }) => {
   return (
-    <div className={`inline-flex flex-col items-start pt-[5px] relative ${className}`}>
+    <div className={`inline-flex flex-col items-start pt-[10px] relative ${className}`}>
       {/* <TimeBar
         className="!bg-[color:var(--backgroundcontextualsurface)] !relative"
         symbols="/img/symbols-1.svg"
         timeClassName="!text-[color:var(--typecontextualon-surface)]"
       /> */}
       <div
-        className={`flex w-[360px] items-start justify-between pt-[16px] pb-[8px] px-[16px] relative flex-[0_0_auto] bg-[color:var(--backgroundcontextualsurface)] ${mobileHeaderClassName}`}
+        className={`flex w-[360px] items-start justify-between pt-[20px] pb-[8px] px-[16px] relative flex-[0_0_auto] bg-[color:var(--backgroundcontextualsurface)] ${mobileHeaderClassName}`}
       >
         <div className="inline-flex items-center gap-[12px] relative flex-[0_0_auto]">
           {navIcon && (
