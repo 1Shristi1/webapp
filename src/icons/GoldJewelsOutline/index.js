@@ -1,0 +1,1 @@
+export { GoldJewelsOutline } from "./GoldJewelsOutline";
