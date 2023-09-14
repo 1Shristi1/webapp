@@ -1,0 +1,1 @@
+export { ArrowLeftOutline } from "./ArrowLeftOutline";

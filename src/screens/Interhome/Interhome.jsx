@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FilterChip } from "../../components/FilterChip";
 import { SectionalButton } from "../../components/SectionalButton";
 // import { TimeBar } from "../../components/TimeBar";
@@ -6,8 +6,20 @@ import { ArrowDownOutline1 } from "../../icons/ArrowDownOutline1";
 import { ArrowLeftOutline1 } from "../../icons/ArrowLeftOutline1";
 import { CaretRightOutline } from "../../icons/CaretRightOutline";
 import { GoldJewelsOutline } from "../../icons/GoldJewelsOutline";
+import {CardTracker } from '../CardTracker';
 
 export const Interhome = () => {
+  const [isCardTrackingVisible, setIsCardTrackingVisible] = useState(false);
+
+  const handleCardTrackingClick = () => {
+    setIsCardTrackingVisible(true);
+  };
+
+  const handleCloseCardTracking = () => {
+    setIsCardTrackingVisible(false);
+  };
+
+
   return (
     <div className="bg-[#131313] flex flex-row justify-center w-full">
       <div className="bg-[color:var(--backgroundcontextualsurface)] w-[360px] h-[1067px] relative">
@@ -73,7 +85,22 @@ export const Interhome = () => {
                             </p>
                           </div>
                         </div>
-                        <CaretRightOutline className="!relative !w-[16px] !h-[16px]" color="#F2F2F2" />
+                        <div>
+                          <button
+                            onClick={handleCardTrackingClick}
+                            className="bg-transparent border-none"
+                          >
+                            <CaretRightOutline
+                              className="!relative !w-[16px] !h-[16px]"
+                              color="#F2F2F2"
+                            />
+                          </button>
+
+                          {isCardTrackingVisible && (
+                            <CardTracker isVisible= {isCardTrackingVisible} onClose={handleCloseCardTracking} />
+                          )}
+                        </div>
+
                       </div>
                     </div>
                   </div>

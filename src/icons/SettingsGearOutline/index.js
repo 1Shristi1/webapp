@@ -1,0 +1,1 @@
+export { SettingsGearOutline } from "./SettingsGearOutline";

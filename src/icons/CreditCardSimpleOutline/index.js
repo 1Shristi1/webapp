@@ -1,0 +1,1 @@
+export { CreditCardSimpleOutline } from "./CreditCardSimpleOutline";
