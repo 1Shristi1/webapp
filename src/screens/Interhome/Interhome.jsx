@@ -7,6 +7,7 @@ import { ArrowLeftOutline1 } from "../../icons/ArrowLeftOutline1";
 import { CaretRightOutline } from "../../icons/CaretRightOutline";
 import { GoldJewelsOutline } from "../../icons/GoldJewelsOutline";
 import { CardTracker } from '../CardTracker';
+import { ManageCard } from "../../components/ManageCard/ManageCard";
 
 export const Interhome = () => {
   const [isCardTrackingVisible, setIsCardTrackingVisible] = useState(false);
@@ -33,25 +34,24 @@ export const Interhome = () => {
 
   return (
     <div className="bg-[#131313] flex flex-row justify-center w-full">
-      <div className="bg-[color:var(--backgroundcontextualsurface)] w-[360px] h-[1067px] relative">
-        <div className="absolute w-[360px] h-[790px] top-0 left-0">
-          <div className="inline-flex flex-col items-start gap-[16px] px-0 py-[12px] absolute top-[80px] left-0">
-            <div className="flex items-center gap-[8px] px-[16px] py-0 relative self-stretch w-full flex-[0_0_auto]">
+      <div className="bg-[color:var(--backgroundcontextualsurface)] w-full h-[1067px] relative">
+        <div className="absolute w-full h-[790px] top-0 left-0">
+          <div className="inline-flex flex-col items-start gap-[16px] px-[16px] py-[12px] absolute top-[80px] left-0 w-full">
+            <div className="flex items-center gap-[8px] pr-[16px] py-0 relative self-stretch w-full flex-[0_0_auto]">
               <div className="relative flex-1 mt-[-1.00px] [font-family:var(--title-1-font-family)] font-[number:var(--title-1-font-weight)] text-[color:var(--typecontextualhighlight)] text-[length:var(--title-1-font-size)] tracking-[var(--title-1-letter-spacing)] leading-[var(--title-1-line-height)] [font-style:var(--title-1-font-style)]">
                 Hello Rajeshwar
               </div>
             </div>
-            <div className="inline-flex flex-col items-center gap-[32px] relative flex-[0_0_auto]">
-              <div className="inline-flex flex-col items-start gap-[12px] relative flex-[0_0_auto]">
-                <img
-                  className="relative self-stretch w-full flex-[0_0_auto]"
-                  alt="Manage card"
-                  src="/img/manage-card.png"
-                />
-                <div className="flex w-[328px] items-start gap-[12px] relative flex-[0_0_auto]">
+            <div className="inline-flex flex-col items-center gap-[32px] relative flex-[0_0_auto] w-full">
+              <div className="inline-flex flex-col w-full gap-[12px]">
+
+                <ManageCard />
+
+
+                <div className="grid grid-cols-2 gap-4">
                   <SectionalButton
                     buttonLabelClassName="!text-[color:var(--typeneutralmedium-emphasis)]"
-                    className="!flex-1 !grow !w-[unset]"
+                    className=""
                     icon={<GoldJewelsOutline className="!relative !w-[24px] !h-[24px]" color="#191307" />}
                     label={
                       <>
@@ -63,18 +63,18 @@ export const Interhome = () => {
                     state="enabled"
                   />
                   <SectionalButton
-                    className="!flex-1 !grow !w-[unset]"
+                    className=""
                     icon={<ArrowDownOutline1 className="!relative !w-[24px] !h-[24px]" color="#191307" />}
                     label="Withdraw"
                     selected={false}
                     state="enabled"
                   />
                 </div>
-                <div className="inline-flex flex-col items-center relative flex-[0_0_auto]">
+                <div className="inline-flex flex-col w-full tems-center relative flex-[0_0_auto]">
                   <div className="inline-flex flex-col items-center gap-[8px] relative flex-[0_0_auto]">
-                    <div className="inline-flex flex-col items-center gap-[10px] relative flex-[0_0_auto]">
-                      <div className="flex w-[328px] items-center justify-between p-[16px] relative flex-[0_0_auto] bg-[color:var(--backgroundneutraltertiary)] rounded-[16px_16px_0px_0px]">
-                        <div className="flex w-[262px] items-center gap-[12px] relative">
+                    <div className="inline-flex w-full flex-col items-center gap-[10px] relative flex-[0_0_auto]">
+                      <div className="flex w-full items-center justify-between p-[16px] relative flex-[0_0_auto] bg-[color:var(--backgroundneutraltertiary)] rounded-[16px_16px_0px_0px]">
+                        <div className="flex flex-wrap w-full items-center gap-[12px] md:gap-[20px] relative">
                           <div className="relative w-[42px] h-[42px]">
                             <div className="relative w-[37px] h-[34px] top-[5px] left-[3px]">
                               <div className="absolute w-[34px] h-[19px] top-[13px] left-[2px] bg-[#bbf4d9]" />
@@ -90,9 +90,9 @@ export const Interhome = () => {
                               />
                             </div>
                           </div>
-                          <div className="inline-flex flex-col items-start justify-center gap-[4px] relative flex-[0_0_auto]">
-                            <p className="w-[202px] font-medium text-[color:var(--typecontextualon-surface-cont)] relative mt-[-1.00px] [font-family:'Inter',Helvetica] text-[14px] tracking-[0] leading-[22px]">
-                              Your credit card has been dispatched
+                          <div className="inline-flex items-center justify-center gap-[4px] md:gap-[10px] relative flex-[0_0_auto]">
+                            <p className="w-full font-medium text-[color:var(--typecontextualon-surface-cont)] relative mt-[-1.00px] [font-family:'Inter',Helvetica] text-[14px] tracking-[0] leading-[22px]">
+                              Your credit card has been  <br /> dispatched
                             </p>
                           </div>
                         </div>
@@ -117,7 +117,7 @@ export const Interhome = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex w-[328px] h-[40px] items-center justify-center gap-[10px] px-[16px] py-[8px] relative bg-[color:var(--backgroundcontextualon-surface-cont)] rounded-[0px_0px_16px_16px]">
+                  <div className="flex h-[40px] items-center justify-center gap-[10px] px-[16px] py-[8px] relative bg-[color:var(--backgroundcontextualon-surface-cont)] rounded-[0px_0px_16px_16px]">
                     <div className="inline-flex items-center justify-center gap-[8px] relative flex-[0_0_auto]">
                       <p className="relative w-fit mt-[-1.00px] [font-family:var(--body-small-medium-emphasis-font-family)] font-[number:var(--body-small-medium-emphasis-font-weight)] text-[color:var(--typeneutrallow-emphasis)] text-[length:var(--body-small-medium-emphasis-font-size)] tracking-[var(--body-small-medium-emphasis-letter-spacing)] leading-[var(--body-small-medium-emphasis-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-emphasis-font-style)]">
                         Expected Card Delivery by 12 Sep
@@ -126,31 +126,31 @@ export const Interhome = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col w-[360px] items-start gap-[16px] px-[16px] py-0 relative flex-[0_0_auto]">
-                <div className="inline-flex items-center gap-[4px] relative flex-[0_0_auto]">
+              <div className="flex flex-col w-full items-start gap-[16px] py-0 relative flex-[0_0_auto]">
+                <div className="inline-flex items-start gap-[4px] relative flex-[0_0_auto]">
                   <img className="relative w-[24px] h-[24px]" alt="Gift" src="/img/gift.svg" />
                   <div className="relative w-fit mt-[-1.00px] [font-family:var(--body-large-high-emphasis-font-family)] font-[number:var(--body-large-high-emphasis-font-weight)] text-[color:var(--typeneutrallow-emphasis)] text-[length:var(--body-large-high-emphasis-font-size)] tracking-[var(--body-large-high-emphasis-letter-spacing)] leading-[var(--body-large-high-emphasis-line-height)] whitespace-nowrap [font-style:var(--body-large-high-emphasis-font-style)]">
                     Rewards and Cashback
                   </div>
                 </div>
-                <div className="inline-flex flex-col items-start gap-[12px] relative flex-[0_0_auto]">
-                  <div className="inline-flex flex-col items-start relative flex-[0_0_auto]">
-                    <div className="relative w-[328px] h-[54px] bg-[color:var(--backgroundneutralsecondary-inverse)] rounded-[16px_16px_0px_0px]">
-                      <div className="flex w-[296px] justify-between top-[16px] left-[16px] items-center relative">
-                        <div className="flex w-[296px] items-center gap-[12px] relative">
-                          <div className="inline-flex items-center gap-[80px] relative flex-[0_0_auto]">
-                            <div className="w-fit font-semibold text-[color:var(--typeneutralhigh-emphasis)] whitespace-nowrap relative mt-[-1.00px] [font-family:'Inter',Helvetica] text-[14px] tracking-[0] leading-[22px]">
-                              Total Cashback
-                            </div>
-                            <div className="w-[85px] font-semibold text-[color:var(--typeneutralhigh-emphasis)] text-right relative mt-[-1.00px] [font-family:'Inter',Helvetica] text-[14px] tracking-[0] leading-[22px]">
-                              ₹ 0
-                            </div>
+                <div className="inline-flex flex-col w-full items-start gap-[12px] relative flex-[0_0_auto]">
+                  <div className="inline-flex flex-col w-full items-start relative flex-[0_0_auto]">
+                    <div className="relative w-full h-[54px] bg-[color:var(--backgroundneutralsecondary-inverse)] rounded-[16px_16px_0px_0px]">
+                      <div className="flex flex-wrap w-full justify-between p-[16px] items-center relative">
+                        {/* <div className="flex  items-center relative"> */}
+                        <div className="flex flex-wrap w-11/12 justify-between">
+                          <div className="font-semibold text-[color:var(--typeneutralhigh-emphasis)] whitespace-nowrap relative mt-[-1.00px] [font-family:'Inter',Helvetica] text-[14px] tracking-[0] leading-[22px]">
+                            Total Cashback
                           </div>
+                          <div className=" font-semibold text-[color:var(--typeneutralhigh-emphasis)] text-right relative mt-[-1.00px] [font-family:'Inter',Helvetica] text-[14px] tracking-[0] leading-[22px]">
+                            ₹ 0
+                          </div>
+                          {/* </div> */}
                         </div>
                         <CaretRightOutline className="!relative !w-[16px] !h-[16px] !ml-[-16px]" color="#A6A6A6" />
                       </div>
                     </div>
-                    <div className="flex w-[328px] items-center justify-center gap-[10px] pt-[8px] pb-[12px] px-[16px] relative flex-[0_0_auto] bg-[#eefcf5] rounded-[0px_0px_16px_16px]">
+                    <div className="flex w-full items-center justify-center gap-[10px] pt-[8px] pb-[12px] px-[16px] relative flex-[0_0_auto] bg-[#eefcf5] rounded-[0px_0px_16px_16px]">
                       <div className="inline-flex items-end justify-center gap-[8px] relative flex-[0_0_auto] ml-[-3.00px] mr-[-3.00px]">
                         <img className="relative w-[24px] h-[24px]" alt="Hand coins" src="/img/handcoins.svg" />
                         <p className="relative w-fit [font-family:var(--body-small-medium-emphasis-font-family)] font-[number:var(--body-small-medium-emphasis-font-weight)] text-[#225b40] text-[length:var(--body-small-medium-emphasis-font-size)] tracking-[var(--body-small-medium-emphasis-letter-spacing)] leading-[var(--body-small-medium-emphasis-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-emphasis-font-style)]">
@@ -159,11 +159,11 @@ export const Interhome = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex w-[328px] items-center gap-[16px] px-[16px] py-[24px] relative flex-[0_0_auto] bg-[color:var(--backgroundneutralsecondary-inverse)] rounded-[16px] overflow-hidden">
-                    <div className="absolute w-[264px] h-[264px] top-[23px] left-[123px] rotate-[-17.25deg]">
+                  <div className="flex w-full items-center gap-[16px] px-[16px] py-[24px] relative flex-[0_0_auto] bg-[color:var(--backgroundneutralsecondary-inverse)] rounded-[16px] overflow-hidden">
+                    <div className="absolute w-[264px] h-[264px] top-[-30px] right-[-80px] !rotate-90">
                       <div className="relative h-[264px] rounded-[262.02px]">
                         <div className="absolute w-[264px] h-[264px] top-0 left-0 rounded-[262.02px] overflow-hidden border-[0.52px] border-solid border-transparent backdrop-blur-[4.19px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(4.19px)_brightness(100%)] [border-image:linear-gradient(to_bottom,rgba(249,221,183,0),rgba(249,221,183,0.4)_52.29%,rgba(249,221,183,0)_100%)_1] [background:linear-gradient(180deg,rgba(249,221,183,0)_35.16%,rgba(249,221,183,0.2)_89.02%)]">
-                          <div className="w-[52px] h-[52px] top-[-48px] left-[106px] rounded-[26.2px] blur-[56.6px] relative bg-[#ffe3b6]" />
+                          <div className="relative w-[52px] h-[52px] top-[-48px] left-[106px] bg-[#ffe3b6] rounded-[26.2px] blur-[56.6px]" />
                         </div>
                         <div className="absolute w-[224px] h-[224px] top-[37px] left-[20px] rounded-[262.02px] overflow-hidden border-[0.52px] border-solid border-transparent backdrop-blur-[4.19px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(4.19px)_brightness(100%)] [border-image:linear-gradient(to_bottom,rgba(249,221,183,0),rgba(249,221,183,0.4)_52.29%,rgba(249,221,183,0)_100%)_1] [background:linear-gradient(180deg,rgba(249,221,183,0)_29.06%,rgba(249,221,183,0.2)_89.02%)]">
                           <div className="relative w-[52px] h-[52px] top-[-57px] left-[86px] bg-[#ffe3b699] rounded-[26.2px] blur-[56.6px]" />
@@ -180,7 +180,7 @@ export const Interhome = () => {
                       </p>
                     </div>
                     <img
-                      className="absolute w-[213px] h-[213px] -top-px left-[143px] object-cover"
+                      className="absolute w-[213px] h-[213px] -top-[1px] right-[-30px] object-cover"
                       alt="Gift dynamic premium"
                       src="/img/gift-dynamic-premium.png"
                     />
@@ -189,23 +189,24 @@ export const Interhome = () => {
               </div>
             </div>
           </div>
-          <div className="flex w-[360px] items-start justify-between pt-[16px] pb-[8px] px-[16px] absolute top-[24px] left-0 bg-[color:var(--backgroundcontextualsurface)]">
+          <div className="flex w-full items-start justify-between pt-[16px] pb-[8px] px-[16px] absolute top-[24px] left-0 bg-[color:var(--backgroundcontextualsurface)]">
             <div className="inline-flex gap-[12px] flex-[0_0_auto] items-center relative">
               <div className="inline-flex justify-center p-[4px] flex-[0_0_auto] bg-[color:var(--backgroundcontextualsurface-cont)] rounded-[24px] items-center relative">
                 <ArrowLeftOutline1 className="!relative !w-[24px] !h-[24px]" color="white" />
               </div>
             </div>
-            <div className="inline-flex items-start gap-[12px] relative flex-[0_0_auto]" />
+            {/* <div className="inline-flex items-start gap-[12px] relative flex-[0_0_auto]" /> */}
+            <FilterChip
+              className=""
+              isSelected={false}
+              state="default"
+              style="unselected"
+              text="Need Help"
+            />
           </div>
-          <FilterChip
-            className="!absolute !left-[241px] !top-[40px]"
-            isSelected={false}
-            state="default"
-            style="unselected"
-            text="Need Help"
-          />
+
           <div className="absolute w-[360px] h-[144px] top-0 left-0">
-            <div className="w-[300px] h-[300px] top-[-309px] left-[28px] rounded-[150px] blur-[200px] relative bg-[color:var(--backgroundcontextualprimary-cont)]" />
+            <div className="w-[300px] h-[300px] top-[-360px] left-[28px] rounded-[150px] relative blur-[200px] bg-[color:var(--backgroundcontextualprimary-cont)]" />
           </div>
           {/* <TimeBar
             className="!absolute !left-0 !bg-[unset] !top-0"
@@ -213,11 +214,16 @@ export const Interhome = () => {
             timeClassName="!text-[color:var(--typecontextualon-surface)]"
           /> */}
         </div>
-        <img
-          className="absolute w-[344px] h-[180px] top-[887px] left-[16px] object-cover"
-          alt="Footerimage"
-          src="/img/footerimage-1.png"
-        />
+        <div className="overflow-hidden w-full items-center">
+          <img
+            className=" absolute w-11/12 h-[180px]  top-[887px] left-[16px] object-fit"
+            alt="Footerimage"
+            src="/img/footerimage-1.png"
+          />
+        </div>
+
+
+
       </div>
     </div>
   );

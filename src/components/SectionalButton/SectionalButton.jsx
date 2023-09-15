@@ -17,9 +17,7 @@ export const SectionalButton = ({
 }) => {
   return (
     <div
-      className={`items-center gap-[8px] px-[16px] py-[12px] rounded-[16px] justify-center relative ${
-        !selected || state === "pressed" ? "w-[168px]" : ""
-      } ${!selected || state === "pressed" ? "flex" : state === "active" ? "inline-flex" : ""} ${
+      className={`flex flex-wrap items-center gap-[8px] md:gap-[16px] px-[16px] py-[12px] rounded-[16px] justify-center ${!selected || state === "pressed" ? "flex" : state === "active" ? "inline-flex" : ""} ${
         state === "enabled"
           ? "bg-[color:var(--backgroundcontextualsurface-cont)]"
           : state === "active"

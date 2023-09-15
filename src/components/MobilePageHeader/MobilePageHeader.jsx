@@ -22,23 +22,23 @@ export const MobilePageHeader = ({
   onclose
 }) => {
   return (
-    <div className={`inline-flex flex-col items-start pt-[10px] relative ${className}`}>
+    <div className={`inline-flex flex-col w-full items-start pt-[10px] relative ${className}`}>
       {/* <TimeBar
         className="!bg-[color:var(--backgroundcontextualsurface)] !relative"
         symbols="/img/symbols-1.svg"
         timeClassName="!text-[color:var(--typecontextualon-surface)]"
       /> */}
       <div
-        className={`flex w-[360px] items-start justify-between pt-[20px] pb-[8px] px-[16px] relative flex-[0_0_auto] bg-[color:var(--backgroundcontextualsurface)] ${mobileHeaderClassName}`}
+        className={`flex w-full items-start justify-between pt-[24px] pb-[8px] px-[16px] relative flex-[0_0_auto] bg-[color:var(--backgroundcontextualsurface)] ${mobileHeaderClassName}`}
       >
         <div className="inline-flex items-center gap-[12px] relative flex-[0_0_auto]">
           {navIcon && (
-            <div className="inline-flex items-center justify-center p-[4px] relative flex-[0_0_auto] bg-[color:var(--backgroundcontextualsurface-cont)] rounded-[24px]">
+            <div className="flex-[0_0_auto] bg-[color:var(--backgroundcontextualsurface-cont)] rounded-full">
                <button
                             onClick={onclose}
-                            className="bg-transparent border-none"
+                            className="bg-transparent border-none items-center justify-center h-10 w-10"
                           >
-                            <ArrowLeftOutline className="!relative !w-[24px] !h-[24px]" color="white" />
+                            <ArrowLeftOutline className="!w-[24px] !h-[24px]" color="white" />
                           </button>
             </div>
           )}
