@@ -8,6 +8,7 @@ import { CaretRightOutline } from "../../icons/CaretRightOutline";
 import { GoldJewelsOutline } from "../../icons/GoldJewelsOutline";
 import { CardTracker } from '../CardTracker';
 import { ManageCard } from "../../components/ManageCard/ManageCard";
+import { FAQ } from "../../components/FAQ/FAQ";
 
 export const Interhome = () => {
   const [isCardTrackingVisible, setIsCardTrackingVisible] = useState(false);
@@ -34,7 +35,7 @@ export const Interhome = () => {
 
   return (
     <div className="bg-[#131313] flex flex-row justify-center w-full">
-      <div className="bg-[color:var(--backgroundcontextualsurface)] w-full h-[1067px] relative">
+      <div className="bg-[color:var(--backgroundcontextualsurface)] w-full h-[1267px] relative">
         <div className="absolute w-full h-[790px] top-0 left-0">
           <div className="inline-flex flex-col items-start gap-[16px] px-[16px] py-[12px] absolute top-[80px] left-0 w-full">
             <div className="flex items-center gap-[8px] pr-[16px] py-0 relative self-stretch w-full flex-[0_0_auto]">
@@ -48,7 +49,7 @@ export const Interhome = () => {
                 <ManageCard />
 
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-[12px]">
                   <SectionalButton
                     buttonLabelClassName="!text-[color:var(--typeneutralmedium-emphasis)]"
                     className=""
@@ -119,7 +120,7 @@ export const Interhome = () => {
                   </div>
                   <div className="flex h-[40px] items-center justify-center gap-[10px] px-[16px] py-[8px] relative bg-[color:var(--backgroundcontextualon-surface-cont)] rounded-[0px_0px_16px_16px]">
                     <div className="inline-flex items-center justify-center gap-[8px] relative flex-[0_0_auto]">
-                      <p className="relative w-fit mt-[-1.00px] [font-family:var(--body-small-medium-emphasis-font-family)] font-[number:var(--body-small-medium-emphasis-font-weight)] text-[color:var(--typeneutrallow-emphasis)] text-[length:var(--body-small-medium-emphasis-font-size)] tracking-[var(--body-small-medium-emphasis-letter-spacing)] leading-[var(--body-small-medium-emphasis-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-emphasis-font-style)]">
+                      <p className="relative mt-[-1.00px] [font-family:var(--body-small-medium-emphasis-font-family)] font-[number:var(--body-small-medium-emphasis-font-weight)] text-[color:var(--typeneutrallow-emphasis)] text-[length:var(--body-small-medium-emphasis-font-size)] tracking-[var(--body-small-medium-emphasis-letter-spacing)] leading-[var(--body-small-medium-emphasis-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-emphasis-font-style)]">
                         Expected Card Delivery by 12 Sep
                       </p>
                     </div>
@@ -150,7 +151,7 @@ export const Interhome = () => {
                         <CaretRightOutline className="!relative !w-[16px] !h-[16px] !ml-[-16px]" color="#A6A6A6" />
                       </div>
                     </div>
-                    <div className="flex w-full items-center justify-center gap-[10px] pt-[8px] pb-[12px] px-[16px] relative flex-[0_0_auto] bg-[#eefcf5] rounded-[0px_0px_16px_16px]">
+                    <div className="flex w-full items-start gap-[10px] pt-[8px] pb-[12px] px-[16px] relative flex-[0_0_auto] bg-[#eefcf5] rounded-[0px_0px_16px_16px]">
                       <div className="inline-flex items-end justify-center gap-[8px] relative flex-[0_0_auto] ml-[-3.00px] mr-[-3.00px]">
                         <img className="relative w-[24px] h-[24px]" alt="Hand coins" src="/img/handcoins.svg" />
                         <p className="relative w-fit [font-family:var(--body-small-medium-emphasis-font-family)] font-[number:var(--body-small-medium-emphasis-font-weight)] text-[#225b40] text-[length:var(--body-small-medium-emphasis-font-size)] tracking-[var(--body-small-medium-emphasis-letter-spacing)] leading-[var(--body-small-medium-emphasis-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-emphasis-font-style)]">
@@ -160,13 +161,13 @@ export const Interhome = () => {
                     </div>
                   </div>
                   <div className="flex w-full items-center gap-[16px] px-[16px] py-[24px] relative flex-[0_0_auto] bg-[color:var(--backgroundneutralsecondary-inverse)] rounded-[16px] overflow-hidden">
-                    <div className="absolute w-[264px] h-[264px] top-[-30px] right-[-80px] !rotate-90">
+                    <div style={{ transform: 'rotate(180deg)' }} className="absolute w-[264px] h-[264px] top-[12px] right-[-60px]">
                       <div className="relative h-[264px] rounded-[262.02px]">
-                        <div className="absolute w-[264px] h-[264px] top-0 left-0 rounded-[262.02px] overflow-hidden border-[0.52px] border-solid border-transparent backdrop-blur-[4.19px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(4.19px)_brightness(100%)] [border-image:linear-gradient(to_bottom,rgba(249,221,183,0),rgba(249,221,183,0.4)_52.29%,rgba(249,221,183,0)_100%)_1] [background:linear-gradient(180deg,rgba(249,221,183,0)_35.16%,rgba(249,221,183,0.2)_89.02%)]">
-                          <div className="relative w-[52px] h-[52px] top-[-48px] left-[106px] bg-[#ffe3b6] rounded-[26.2px] blur-[56.6px]" />
+                        <div className="absolute w-[264px] h-[264px] top-0 left-0 rounded-[262.02px] overflow-hidden border-[0.52px] border-transparent [border-image:linear-gradient(to_bottom,rgba(249,221,183,0),rgba(249,221,183,0.4)_52.29%,rgba(249,221,183,0)_100%)_1] [background:linear-gradient(180deg,rgba(249,221,183,0)_35.16%,rgba(249,221,183,0.2)_89.02%)]">
+                          <div style={{ filter: 'blur(250px)' }} className="relative w-[52px] h-[52px] top-[-48px] left-[106px] bg-[#ffe3b6] rounded-[26.2px]" />
                         </div>
-                        <div className="absolute w-[224px] h-[224px] top-[37px] left-[20px] rounded-[262.02px] overflow-hidden border-[0.52px] border-solid border-transparent backdrop-blur-[4.19px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(4.19px)_brightness(100%)] [border-image:linear-gradient(to_bottom,rgba(249,221,183,0),rgba(249,221,183,0.4)_52.29%,rgba(249,221,183,0)_100%)_1] [background:linear-gradient(180deg,rgba(249,221,183,0)_29.06%,rgba(249,221,183,0.2)_89.02%)]">
-                          <div className="relative w-[52px] h-[52px] top-[-57px] left-[86px] bg-[#ffe3b699] rounded-[26.2px] blur-[56.6px]" />
+                        <div className="absolute w-[224px] h-[224px] left-[20px] rounded-[262.02px] overflow-hidden border-[0.52px] border-transparent [border-image:linear-gradient(to_bottom,rgba(249,221,183,0),rgba(249,221,183,0.4)_52.29%,rgba(249,221,183,0)_100%)_1] [background:linear-gradient(180deg,rgba(249,221,183,0)_29.06%,rgba(249,221,183,0.2)_89.02%)]">
+                          <div style={{ filter: 'blur(250px)' }} className="relative w-[52px] h-[52px] top-[-57px] left-[86px] bg-[#ffe3b699] rounded-[26.2px]" />
                         </div>
                       </div>
                     </div>
@@ -187,9 +188,10 @@ export const Interhome = () => {
                   </div>
                 </div>
               </div>
+              <FAQ />
             </div>
           </div>
-          <div className="flex w-full items-start justify-between pt-[16px] pb-[8px] px-[16px] absolute top-[24px] left-0 bg-[color:var(--backgroundcontextualsurface)]">
+          <div className="flex w-full items-start justify-between pt-[16px] pb-[8px] px-[16px] absolute top-[24px] left-0">
             <div className="inline-flex gap-[12px] flex-[0_0_auto] items-center relative">
               <div className="inline-flex justify-center p-[4px] flex-[0_0_auto] bg-[color:var(--backgroundcontextualsurface-cont)] rounded-[24px] items-center relative">
                 <ArrowLeftOutline1 className="!relative !w-[24px] !h-[24px]" color="white" />
@@ -204,9 +206,9 @@ export const Interhome = () => {
               text="Need Help"
             />
           </div>
-
-          <div className="absolute w-[360px] h-[144px] top-0 left-0">
-            <div className="w-[300px] h-[300px] top-[-360px] left-[28px] rounded-[150px] relative blur-[200px] bg-[color:var(--backgroundcontextualprimary-cont)]" />
+          <div className="absolute w-full top-0 left-0 items-center justify-center">
+            <div style={{ filter: 'blur(60px)' }} className="w-[300px] h-[300px] rounded-full relative top-[-300px] left-[40px] bg-[color:var(--backgroundcontextualprimary-cont)]">
+            </div>
           </div>
           {/* <TimeBar
             className="!absolute !left-0 !bg-[unset] !top-0"
@@ -216,7 +218,7 @@ export const Interhome = () => {
         </div>
         <div className="overflow-hidden w-full items-center">
           <img
-            className=" absolute w-11/12 h-[180px]  top-[887px] left-[16px] object-fit"
+            className=" absolute w-11/12 h-[180px]  top-[1087px] left-[16px] object-fit"
             alt="Footerimage"
             src="/img/footerimage-1.png"
           />
